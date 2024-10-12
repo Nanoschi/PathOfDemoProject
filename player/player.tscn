@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4kkjbc4ru7rp"]
+
+[ext_resource type="Script" path="res://player/Player.cs" id="1_8ro6c"]
+[ext_resource type="Texture2D" uid="uid://diegwfkklx35d" path="res://icon.svg" id="1_fqdsh"]
+[ext_resource type="PackedScene" uid="uid://dy7kv0cmfqm8x" path="res://player/player_ui.tscn" id="3_g68ou"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ptitq"]
+radius = 64.0312
+
+[node name="Player" type="Node2D" node_paths=PackedStringArray("hitbox")]
+script = ExtResource("1_8ro6c")
+hitbox = NodePath("Hitbox")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_fqdsh")
+
+[node name="Camera" type="Camera2D" parent="."]
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="HitboxShape" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_ptitq")
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="PlayerUI" parent="UILayer" instance=ExtResource("3_g68ou")]

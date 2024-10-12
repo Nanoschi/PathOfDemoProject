@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://dy7kv0cmfqm8x"]
+
+[ext_resource type="Script" path="res://player/PlayerUI.cs" id="1_d2x6m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lt6n0"]
+bg_color = Color(0.439216, 0, 0.0431373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_roogc"]
+bg_color = Color(0.742879, 0.0270301, 1.92523e-07, 1)
+
+[node name="PlayerUI" type="Control" node_paths=PackedStringArray("HealthBar", "HealthLabel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d2x6m")
+HealthBar = NodePath("HBoxContainer/HealthBar")
+HealthLabel = NodePath("HBoxContainer/Label")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Zahl"
+
+[node name="HealthBar" type="ProgressBar" parent="HBoxContainer"]
+custom_minimum_size = Vector2(600, 40)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_lt6n0")
+theme_override_styles/fill = SubResource("StyleBoxFlat_roogc")
+value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true

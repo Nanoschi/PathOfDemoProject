@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://5y8pwkcfmq4g"]
+
+[sub_resource type="Gradient" id="Gradient_l74pk"]
+offsets = PackedFloat32Array(0.00649351, 1)
+colors = PackedColorArray(0.312735, 0.173448, 0.0511938, 1, 0.713994, 0.475397, 0.169968, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ivqn4"]
+frequency = 0.025
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_mqpvy"]
+color_ramp = SubResource("Gradient_l74pk")
+noise = SubResource("FastNoiseLite_ivqn4")
+
+[node name="World" type="Node2D"]
+
+[node name="Ground" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = SubResource("NoiseTexture2D_mqpvy")
