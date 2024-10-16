@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://dh4uuy3qjwm6d"]
+
+[ext_resource type="Script" path="res://fields/bleed_field/BleedField.cs" id="1_8x7hw"]
+
+[sub_resource type="Gradient" id="Gradient_eje6w"]
+offsets = PackedFloat32Array(0, 0.987013, 1)
+colors = PackedColorArray(0.334028, 0.0153425, 7.21961e-08, 1, 0.915584, 0.915584, 0.915584, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_svbaf"]
+gradient = SubResource("Gradient_eje6w")
+width = 1
+height = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6453"]
+size = Vector2(561, 343)
+
+[node name="BleedField" type="Node2D" node_paths=PackedStringArray("Area")]
+script = ExtResource("1_8x7hw")
+Area = NodePath("EffectArea")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(283.75, 173.25)
+scale = Vector2(568.5, 347.5)
+texture = SubResource("GradientTexture2D_svbaf")
+
+[node name="EffectArea" type="Area2D" parent="."]
+
+[node name="EffectShape" type="CollisionShape2D" parent="EffectArea"]
+position = Vector2(285.5, 173.5)
+shape = SubResource("RectangleShape2D_i6453")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 40
+text = "BLEEDING for 
+5 seconds,
+Take more damage 
+when walking"

@@ -29,6 +29,7 @@ public partial class ESManager : Node
     {
         Effects.System.Inputs.TryAddValue("time", 0.0);
         Effects.System.Inputs.TryAddValue("delta_time", 0.0);
+        Effects.System.Inputs.TryAddValue("walking", false);
     }
 
     private void UpdateInputs()

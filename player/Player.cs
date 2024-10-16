@@ -29,6 +29,7 @@ public partial class Player : Node2D
 	{
 		var vec = Input.GetVector("left", "right", "up", "down");
 		Position += vec * Speed * delta;
+		Effects.System.Inputs["walking"] = vec.Length() != 0;
 	}
 
 	void SetupEffects()

@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://5y8pwkcfmq4g"]
+[gd_scene load_steps=6 format=3 uid="uid://5y8pwkcfmq4g"]
 
 [ext_resource type="PackedScene" uid="uid://cg2lkyb6eecv3" path="res://fields/heal_field/heal_field.tscn" id="1_j01ch"]
+[ext_resource type="PackedScene" uid="uid://dh4uuy3qjwm6d" path="res://fields/bleed_field/bleed_field.tscn" id="2_7b7oh"]
 
 [sub_resource type="Gradient" id="Gradient_l74pk"]
 offsets = PackedFloat32Array(0.00649351, 1)
@@ -21,3 +22,6 @@ texture = SubResource("NoiseTexture2D_mqpvy")
 
 [node name="HealField" parent="." instance=ExtResource("1_j01ch")]
 position = Vector2(-676, -548)
+
+[node name="BleedField" parent="." instance=ExtResource("2_7b7oh")]
+position = Vector2(104, -535)

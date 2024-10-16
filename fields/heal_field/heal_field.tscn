@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://fields/heal_field/HealField.cs" id="1_ijicp"]
 
-[sub_resource type="Gradient" id="Gradient_jwc8g"]
+[sub_resource type="Gradient" id="Gradient_lxe0e"]
 offsets = PackedFloat32Array(0, 0.00649351, 1)
 colors = PackedColorArray(0.956863, 0.0862745, 0, 1, 0.220779, 0.220779, 0.220779, 1, 0.956863, 0.0862745, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_sk04u"]
-gradient = SubResource("Gradient_jwc8g")
+gradient = SubResource("Gradient_lxe0e")
 width = 1
 height = 1
 
@@ -28,3 +28,9 @@ texture = SubResource("GradientTexture2D_sk04u")
 [node name="HealShape" type="CollisionShape2D" parent="HealArea"]
 position = Vector2(285.5, 173.5)
 shape = SubResource("RectangleShape2D_fogt1")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 144
+text = "Healing"
