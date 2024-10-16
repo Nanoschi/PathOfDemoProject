@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dv46fnluf5l4t"]
+[gd_scene load_steps=4 format=3 uid="uid://dv46fnluf5l4t"]
 
 [ext_resource type="PackedScene" uid="uid://5y8pwkcfmq4g" path="res://world/world.tscn" id="1_o1i12"]
 [ext_resource type="PackedScene" uid="uid://b4kkjbc4ru7rp" path="res://player/player.tscn" id="2_ingxs"]
+[ext_resource type="Script" path="res://main/ESManager.cs" id="3_pnqar"]
 
 [node name="Game" type="Node2D"]
 
 [node name="World" parent="." instance=ExtResource("1_o1i12")]
 
 [node name="Player" parent="." instance=ExtResource("2_ingxs")]
+
+[node name="ESManager" type="Node" parent="."]
+script = ExtResource("3_pnqar")

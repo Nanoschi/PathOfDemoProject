@@ -1,12 +1,16 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathOfDemoProject", "PathOfDemoProject.csproj", "{0FF3FB6E-5B61-40E6-94F5-C889FBB32ADA}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathOfDemoProject", "PathOfDemoProject.csproj", "{0FF3FB6E-5B61-40E6-94F5-C889FBB32ADA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-	Debug|Any CPU = Debug|Any CPU
-	ExportDebug|Any CPU = ExportDebug|Any CPU
-	ExportRelease|Any CPU = ExportRelease|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0FF3FB6E-5B61-40E6-94F5-C889FBB32ADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -15,5 +19,10 @@ Global
 		{0FF3FB6E-5B61-40E6-94F5-C889FBB32ADA}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
 		{0FF3FB6E-5B61-40E6-94F5-C889FBB32ADA}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
 		{0FF3FB6E-5B61-40E6-94F5-C889FBB32ADA}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{0FF3FB6E-5B61-40E6-94F5-C889FBB32ADA}.Release|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{0FF3FB6E-5B61-40E6-94F5-C889FBB32ADA}.Release|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
