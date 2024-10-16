@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cg2lkyb6eecv3"]
+
+[ext_resource type="Script" path="res://fields/heal_field/HealField.cs" id="1_ijicp"]
+
+[sub_resource type="Gradient" id="Gradient_jwc8g"]
+offsets = PackedFloat32Array(0, 0.00649351, 1)
+colors = PackedColorArray(0.956863, 0.0862745, 0, 1, 0.220779, 0.220779, 0.220779, 1, 0.956863, 0.0862745, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sk04u"]
+gradient = SubResource("Gradient_jwc8g")
+width = 1
+height = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fogt1"]
+size = Vector2(561, 343)
+
+[node name="HealField" type="Node2D" node_paths=PackedStringArray("HealArea")]
+script = ExtResource("1_ijicp")
+HealArea = NodePath("HealArea")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(283.75, 173.25)
+scale = Vector2(568.5, 347.5)
+texture = SubResource("GradientTexture2D_sk04u")
+
+[node name="HealArea" type="Area2D" parent="."]
+
+[node name="HealShape" type="CollisionShape2D" parent="HealArea"]
+position = Vector2(285.5, 173.5)
+shape = SubResource("RectangleShape2D_fogt1")

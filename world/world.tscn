@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://5y8pwkcfmq4g"]
+[gd_scene load_steps=5 format=3 uid="uid://5y8pwkcfmq4g"]
+
+[ext_resource type="PackedScene" uid="uid://cg2lkyb6eecv3" path="res://fields/heal_field/heal_field.tscn" id="1_j01ch"]
 
 [sub_resource type="Gradient" id="Gradient_l74pk"]
 offsets = PackedFloat32Array(0.00649351, 1)
@@ -16,3 +18,6 @@ noise = SubResource("FastNoiseLite_ivqn4")
 [node name="Ground" type="Sprite2D" parent="."]
 scale = Vector2(4, 4)
 texture = SubResource("NoiseTexture2D_mqpvy")
+
+[node name="HealField" parent="." instance=ExtResource("1_j01ch")]
+position = Vector2(-676, -548)

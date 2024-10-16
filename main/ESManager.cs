@@ -33,9 +33,9 @@ public partial class ESManager : Node
 
     private void UpdateInputs()
     {
-        var timeMs = (double)Time.GetTicksMsec() / 1000.0;
+        var time = (double)Time.GetTicksMsec() / 1000.0;
         var inputTime = (double)Effects.System.Inputs["time"];
-        Effects.System.Inputs.SetValue("time", timeMs);
-        Effects.System.Inputs.SetValue("delta_time", timeMs - inputTime);
+        Effects.System.Inputs.SetValue("time", time);
+        Effects.System.Inputs.SetValue("delta_time", time - inputTime);
     }
 }
